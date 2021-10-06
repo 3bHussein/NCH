@@ -161,11 +161,7 @@ var App = function() {
     var productionFunctionality = {
         createButtons: function() {
             var form = [
-                {
-                    type: 'anchor',
-                    label: 'Buy Now',
-                    target: '_blank'
-                },
+                
                 {
                     type: 'button',
                     label: ''
@@ -193,9 +189,9 @@ var App = function() {
                     case "anchor":
                         var anchor = document.createElement('a');
                         var textanchor = document.createTextNode(obj.label);
-                        anchor.setAttribute('href',"https://themeforest.net/item/cork-responsive-admin-dashboard-template/25582188");
+                        // anchor.setAttribute('href',"https://themeforest.net/item/cork-responsive-admin-dashboard-template/25582188");
                         anchor.style.cssText = "border: none; background-image: linear-gradient(to right, #ff0844 20%, #ffb199 141%);box-shadow: 0 10px 20px -10px #ff0844;";
-                        anchor.classList.add('btn', 'btn-danger', 'buy-btn');
+                        // anchor.classList.add('btn', 'btn-danger', 'buy-btn');
                         anchor.target = obj.target;
                         anchor.appendChild(textanchor);
                         element.appendChild(anchor);
