@@ -284,7 +284,7 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">تاريخ
                                                                       الحصول علي الشهاده</label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="text" required
+                                                                      <input type="date" required
                                                                           class="form-control form-control-sm"
                                                                           id="client-address" placeholder="XYZ Street">
                                                                   </div>
