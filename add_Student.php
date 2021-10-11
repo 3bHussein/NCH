@@ -21,7 +21,7 @@ include 'includes/header.php';
                           <form action="php" method="post">
 
                               <div class="row">
-                                  <div class="col-xl-9">
+                                  <div class="col-xl-12">
 
                                       <div class="invoice-content">
 
@@ -30,7 +30,7 @@ include 'includes/header.php';
                                               <div class="invoice-detail-title">
 
 
-                                                  <h1>اضافه طالب</h1>
+                                                  <h1>إضافة طالب</h1>
                                                   <div class="invoice-logo">
                                                       <div class="upload">
                                                           <input type="file" id="input-file-max-fs" class="dropify"
@@ -60,26 +60,26 @@ include 'includes/header.php';
                                                                   <div class="col-sm-9">
                                                                       <input type="text" required
                                                                           class="form-control form-control-sm"
-                                                                          id="company-name" placeholder="Business Name">
+                                                                          id="company-name" placeholder=" Student Name">
                                                                   </div>
                                                               </div>
 
                                                               <div class="form-group row">
-                                                                  <label for="company-email"
+                                                                  <label for="company-name"
                                                                       class="col-sm-3 col-form-label col-form-label-sm">الرقم
                                                                       القومي</label>
                                                                   <div class="col-sm-9">
                                                                       <input type="text" required
                                                                           class="form-control form-control-sm"
-                                                                          id="company-email"
-                                                                          placeholder="name@company.com">
+                                                                          id="company-name"
+                                                                          placeholder="National ID">
                                                                   </div>
                                                               </div>
 
 
                                                               <div class="form-group row invoice-created-by">
                                                                   <label for="company-address"
-                                                                      class="col-sm-3 col-form-label col-form-label-sm">الشهاده
+                                                                      class="col-sm-3 col-form-label col-form-label-sm">الشهادة
                                                                       الحاصل عليها</label>
                                                                   <div class="col-sm-9">
                                                                       <select name="country_code"
@@ -111,34 +111,34 @@ include 'includes/header.php';
                                                               </div>
 
                                                               <div class="form-group row">
-                                                                  <label for="company-phone"
-                                                                      class="col-sm-3 col-form-label col-form-label-sm">الجنسيه</label>
+                                                                  <label for="company-name"
+                                                                      class="col-sm-3 col-form-label col-form-label-sm">الجنسية</label>
                                                                   <div class="col-sm-9">
                                                                       <input type="text" required
                                                                           class="form-control form-control-sm"
-                                                                          id="company-phone"
+                                                                          id="company-name"
                                                                           placeholder="">
                                                                   </div>
                                                               </div>
 
                                                               <div class="form-group row mt-3">
-                                                                  <label for="company-phone"
-                                                                      class="col-sm-3 col-form-label col-form-label-sm">الديانه</label>
+                                                                  <label for="company-name"
+                                                                      class="col-sm-3 col-form-label col-form-label-sm">الديانة</label>
                                                                   <div class="col-sm-9">
                                                                       <input type="text" required
                                                                           class="form-control form-control-sm"
-                                                                          id="company-phone"
+                                                                          id="company-name"
                                                                           placeholder="">
                                                                   </div>
                                                               </div>
 
                                                               <div class="form-group row mt-3">
-                                                                  <label for="company-phone"
+                                                                  <label for="company-address"
                                                                       class="col-sm-3 col-form-label col-form-label-sm">العنوان</label>
                                                                   <div class="col-sm-9">
                                                                       <input type="text" required
                                                                           class="form-control form-control-sm"
-                                                                          id="company-phone"
+                                                                          id="company-address"
                                                                           placeholder="">
                                                                   </div>
                                                               </div>
@@ -157,8 +157,8 @@ include 'includes/header.php';
 
                                                               <div class="form-group row mt-3">
                                                                   <label for="company-phone"
-                                                                      class="col-sm-3 col-form-label col-form-label-sm">تلفيون
-                                                                      ولي الامر الاول
+                                                                      class="col-sm-3 col-form-label col-form-label-sm">تليفون
+                                                                      ولي الامر 
                                                                   </label>
                                                                   <div class="col-sm-9">
                                                                       <input type="text" required
@@ -480,65 +480,25 @@ include 'includes/header.php';
                                           </div>
 
                                       </div>
-
-                                  </div>
-
-                                  <div class="col-xl-3">
-
-                                      <div class="invoice-actions">
-
-                                          <div class="invoice-action-currency">
-
-                                              <div class="form-group mb-0">
-                                                  <label for="currency">Currency</label>
-                                                  <div class="dropdown selectable-dropdown invoice-select">
-                                                      <a id="currencyDropdown" class="dropdown-toggle"
-                                                          data-toggle="dropdown" aria-haspopup="true"
-                                                          aria-expanded="false"><img src="assets/img/flag-us.svg"
-                                                              class="flag-width" alt="flag"> <span
-                                                              class="selectable-text">USD - US Dollar</span> <span
-                                                              class="selectable-arrow"><svg
-                                                                  xmlns="http://www.w3.org/2000/svg" width="24"
-                                                                  height="24" viewBox="0 0 24 24" fill="none"
-                                                                  stroke="currentColor" stroke-width="2"
-                                                                  stroke-linecap="round" stroke-linejoin="round"
-                                                                  class="feather feather-chevron-down">
-                                                                  <polyline points="6 9 12 15 18 9"></polyline>
-                                                              </svg></span></a>
-                                                      <div class="dropdown-menu" aria-labelledby="currencyDropdown">
-                                                          <a class="dropdown-item"
-                                                              data-img-value="assets/img/flag-us.svg"
-                                                              data-value="USD - US Dollar"
-                                                              href="javascript:void(0);"><img
-                                                                  src="assets/img/flag-us.svg" class="flag-width"
-                                                                  alt="flag"> USD - US Dollar</a>
-
-                                                      </div>
-                                                  </div>
-                                              </div>
-
-                                          </div>
-
-
-                                      </div>
-
                                       <div class="invoice-actions-btn">
 
-                                          <div class="invoice-action-btn">
+<div class="invoice-action-btn">
 
-                                              <div class="row">
-                                                  <div class="col-xl-12 col-md-4">
+    <div class="row">
+        <div class="col-xl-8 col-md-4">
 
-                                                      <input type="submit" class="btn btn-success btn-download"
-                                                          style="width: 100%;float: left;" value="save">
-                                                  </div>
+            <input type="submit" class="btn btn-success btn-download"
+                style="width: 100%;font-size:15px;" value="حفظ">
+        </div>
 
-                                              </div>
-                                          </div>
+    </div>
+</div>
 
-                                      </div>
-
+</div>
                                   </div>
+                                    
+
+                                  
                               </div>
                           </form>
 

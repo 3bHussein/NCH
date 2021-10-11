@@ -13,6 +13,7 @@
     <link href="plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
+<<<<<<< Updated upstream
     <!--  BEGIN CUSTOM STYLE FILE  -->
     <link href="assets/css/apps/invoice-add.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="plugins/dropify/dropify.min.css">
@@ -21,6 +22,43 @@
     
 </head>
 <style>
+=======
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <link href="plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=El+Messiri&display=swap" rel="stylesheet">
+
+    <style>
+.invoice-content .invoice-address-client .invoice-address-client-fields label 
+,.invoice-content .invoice-address-company .invoice-address-company-fields label 
+  ,.form-control.form-control-sm
+  ,.new-radio-content 
+  ,.invoice-detail-note .invoice-note label
+  ,.invoice-detail-note textarea
+  ,.invoice-content .invoice-detail-title
+  ,.invoice-action-btn
+  ,.sidebar-closed>.sidebar-wrapper ul.menu-categories li.menu.menu-heading>.heading span
+  ,#sidebar ul.menu-categories li.menu>a span:not(.badge)    {
+            font-family: 'El Messiri', sans-serif;
+        }
+    </style>
+</head>
+
+
+
+
+
+<body class="alt-menu sidebar-noneoverflow">
+    <!-- BEGIN LOADER -->
+    <div id="load_screen"> <div class="loader"> <div class="loader-content">
+        <div class="spinner-grow align-self-center"></div>
+    </div></div></div>
+    <!--  END LOADER -->
+>>>>>>> Stashed changes
 
 </style>
 <body class="alt-menu sidebar-noneoverflow">
@@ -83,6 +121,7 @@
 
                 <ul class="navbar-nav theme-brand flex-row  text-center">
                     <li class="nav-item theme-logo">
+<<<<<<< Updated upstream
                         <a href="index.php">
                             <!-- <img src="assets/img/logo.svg" class="navbar-logo" alt="logo"> -->
                         </a>
@@ -90,6 +129,15 @@
                     <li class="nav-item theme-text">
                     <!-- <a href="index.php" class="nav-link"> CH System </a> -->
                     </li>
+=======
+                        <a href="index.html">
+                            <!-- <img src="assets/img/logo.svg" class="navbar-logo" alt="logo"> -->
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item theme-text">
+                        <a href="index.html" class="nav-link"> CH System </a>
+                    </li> -->
+>>>>>>> Stashed changes
                 </ul>
 
                 <ul class="list-unstyled menu-categories" id="accordionExample">
