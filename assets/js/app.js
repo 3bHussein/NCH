@@ -35,13 +35,13 @@ var App = function() {
         scrollCat: function() {
             var sidebarWrapper = document.querySelectorAll('.sidebar-wrapper [aria-expanded="true"]')[0];
             var sidebarWrapperTop = sidebarWrapper.offsetTop - 12;
-            setTimeout(function(){ $('.menu-categories').animate({ scrollTop: sidebarWrapperTop }, 500); }, 500);
+            setTimeout(function() { $('.menu-categories').animate({ scrollTop: sidebarWrapperTop }, 500); }, 500);
         }
     }
 
     var toggleFunction = {
         sidebar: function($recentSubmenu) {
-            $('.sidebarCollapse').on('click', function (sidebar) {
+            $('.sidebarCollapse').on('click', function(sidebar) {
                 sidebar.preventDefault();
                 getSidebar = $('.sidebar-wrapper');
                 if ($recentSubmenu === true) {
@@ -98,11 +98,11 @@ var App = function() {
                 }
             })
         },
-        offToggleSidebarSubmenu: function () {
+        offToggleSidebarSubmenu: function() {
             $('.sidebar-wrapper').off('mouseenter mouseleave');
         },
         overlay: function() {
-            $('#dismiss, .overlay, cs-overlay').on('click', function () {
+            $('#dismiss, .overlay, cs-overlay').on('click', function() {
                 // hide sidebar
                 $(Selector.mainContainer).addClass('sidebar-closed');
                 $(Selector.mainContainer).removeClass('sbar-open');
@@ -113,16 +113,16 @@ var App = function() {
         },
         search: function() {
             $(Selector.searchFull).click(function(event) {
-               $(this).parents('.search-animated').find('.search-full').addClass(ToggleClasses.inputFocused);
-               $(this).parents('.search-animated').addClass('show-search');
-               $(Selector.overlay.search).addClass('show');
-               $(Selector.overlay.search).addClass('show');
+                $(this).parents('.search-animated').find('.search-full').addClass(ToggleClasses.inputFocused);
+                $(this).parents('.search-animated').addClass('show-search');
+                $(Selector.overlay.search).addClass('show');
+                $(Selector.overlay.search).addClass('show');
             });
 
             $(Selector.overlay.search).click(function(event) {
-               $(this).removeClass('show');
-               $(Selector.searchFull).parents('.search-animated').find('.search-full').removeClass(ToggleClasses.inputFocused);
-               $(Selector.searchFull).parents('.search-animated').removeClass('show-search');
+                $(this).removeClass('show');
+                $(Selector.searchFull).parents('.search-animated').find('.search-full').removeClass(ToggleClasses.inputFocused);
+                $(Selector.searchFull).parents('.search-animated').removeClass('show-search');
             });
         }
     }
@@ -130,10 +130,10 @@ var App = function() {
     var inBuiltfunctionality = {
         mainCatActivateScroll: function() {
             const ps = new PerfectScrollbar('.menu-categories', {
-                wheelSpeed:.5,
-                swipeEasing:!0,
-                minScrollbarLength:40,
-                maxScrollbarLength:300
+                wheelSpeed: .5,
+                swipeEasing: !0,
+                minScrollbarLength: 40,
+                maxScrollbarLength: 300
             });
         },
         preventScrollBody: function() {
@@ -142,8 +142,7 @@ var App = function() {
 
                 if (e.type == 'mousewheel') {
                     scrollTo = (e.originalEvent.wheelDelta * -1);
-                }
-                else if (e.type == 'DOMMouseScroll') {
+                } else if (e.type == 'DOMMouseScroll') {
                     scrollTo = 40 * e.originalEvent.detail;
                 }
 
@@ -161,13 +160,13 @@ var App = function() {
     var productionFunctionality = {
         createButtons: function() {
             var form = [
-                
+
                 {
                     type: 'button',
                     label: ''
                 }
             ];
-            
+
             var element = document.createElement("div");
             var wrapHtmlAttr = document.createAttribute("class");
             wrapHtmlAttr.value = "online-actions";
@@ -180,17 +179,17 @@ var App = function() {
                         var button = document.createElement('button');
                         var textButton = document.createTextNode(obj.label);
                         button.innerHTML = '<svg style="width: 15px; height: 15px; stroke-width: 2; vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>';
-                        button.style.cssText = " margin-right: 6px;padding: 6px 9px; display: none; border: none;box-shadow: 0 10px 20px -10px #4801FF; background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);";
+                        button.style.cssText = " margin-right: 6px;padding: 6px 9px; display: none; border: none;box-shadow: 0 10px 20px -10px #4801FF; background-color:#1abc9c";
                         button.classList.add('btn', 'btn-secondary', 'scroll-top-btn');
                         button.appendChild(textButton);
                         element.appendChild(button);
                         break;
-            
+
                     case "anchor":
                         var anchor = document.createElement('a');
                         var textanchor = document.createTextNode(obj.label);
                         // anchor.setAttribute('href',"https://themeforest.net/item/cork-responsive-admin-dashboard-template/25582188");
-                        anchor.style.cssText = "border: none; background-image: linear-gradient(to right, #ff0844 20%, #ffb199 141%);box-shadow: 0 10px 20px -10px #ff0844;";
+                        anchor.style.cssText = "border: none; background-color:#1abc9c;box-shadow: 0 10px 20px -10px #ff0844;";
                         // anchor.classList.add('btn', 'btn-danger', 'buy-btn');
                         anchor.target = obj.target;
                         anchor.appendChild(textanchor);
@@ -206,7 +205,7 @@ var App = function() {
             $(document).on('click', '.scroll-top-btn', function(event) {
                 event.preventDefault();
                 var body = $("html, body");
-                body.stop().animate({scrollTop:0}, 500, 'swing');
+                body.stop().animate({ scrollTop: 0 }, 500, 'swing');
             });
         },
 
@@ -216,12 +215,12 @@ var App = function() {
                 var elementScrollToTop = $('.scroll-top-btn');
                 var windowScroll = $(window).scrollTop()
                 var elementoffset = lanWrapper.offset().top;
-            
+
                 // Check if window scroll > or == element offset?
                 if (windowScroll >= elementoffset) {
-                elementScrollToTop.addClass('d-inline-block');
+                    elementScrollToTop.addClass('d-inline-block');
                 } else if (windowScroll < elementoffset) {
-                elementScrollToTop.removeClass('d-inline-block');
+                    elementScrollToTop.removeClass('d-inline-block');
                 }
             });
         }
@@ -230,50 +229,50 @@ var App = function() {
     var _mobileResolution = {
         onRefresh: function() {
             var windowWidth = window.innerWidth;
-            if ( windowWidth <= MediaSize.md ) {
+            if (windowWidth <= MediaSize.md) {
                 categoryScroll.scrollCat();
                 toggleFunction.sidebar();
             }
         },
-        
+
         onResize: function() {
             $(window).on('resize', function(event) {
                 event.preventDefault();
                 var windowWidth = window.innerWidth;
-                if ( windowWidth <= MediaSize.md ) {
+                if (windowWidth <= MediaSize.md) {
                     toggleFunction.offToggleSidebarSubmenu();
                 }
             });
         }
-        
+
     }
 
     var _desktopResolution = {
         onRefresh: function() {
             var windowWidth = window.innerWidth;
-            if ( windowWidth > MediaSize.md ) {
+            if (windowWidth > MediaSize.md) {
                 categoryScroll.scrollCat();
                 toggleFunction.sidebar(true);
                 toggleFunction.onToggleSidebarSubmenu();
             }
         },
-        
+
         onResize: function() {
             $(window).on('resize', function(event) {
                 event.preventDefault();
                 var windowWidth = window.innerWidth;
-                if ( windowWidth > MediaSize.md ) {
+                if (windowWidth > MediaSize.md) {
                     toggleFunction.onToggleSidebarSubmenu();
                 }
             });
         }
-        
+
     }
 
     function sidebarFunctionality() {
         function sidebarCloser() {
 
-            if (window.innerWidth <= 991 ) {
+            if (window.innerWidth <= 991) {
 
 
                 if (!$('body').hasClass('alt-menu')) {
@@ -287,7 +286,7 @@ var App = function() {
                     $('html, body').removeClass('sidebar-noneoverflow');
                 }
 
-            } else if (window.innerWidth > 991 ) {
+            } else if (window.innerWidth > 991) {
 
                 if (!$('body').hasClass('alt-menu')) {
 
@@ -309,14 +308,14 @@ var App = function() {
         }
 
         function sidebarMobCheck() {
-            if (window.innerWidth <= 991 ) {
+            if (window.innerWidth <= 991) {
 
-                if ( $('.main-container').hasClass('sbar-open') ) {
+                if ($('.main-container').hasClass('sbar-open')) {
                     return;
                 } else {
                     sidebarCloser()
                 }
-            } else if (window.innerWidth > 991 ) {
+            } else if (window.innerWidth > 991) {
                 sidebarCloser();
             }
         }
@@ -342,7 +341,7 @@ var App = function() {
             /*
                 Mobile Resoltion fn
             */
-            _mobileResolution.onRefresh();            
+            _mobileResolution.onRefresh();
             _mobileResolution.onResize();
 
             sidebarFunctionality();
@@ -356,9 +355,9 @@ var App = function() {
             /*
                 Production Functionality - Only for Online files not for user files
             */
-                productionFunctionality.createButtons();
-                productionFunctionality.scrollTop();
-                productionFunctionality.checkScrollPosition();
+            productionFunctionality.createButtons();
+            productionFunctionality.scrollTop();
+            productionFunctionality.checkScrollPosition();
         }
     }
 
