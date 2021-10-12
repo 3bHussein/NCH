@@ -46,9 +46,14 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">اسم
                                                                       الطالب</label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="text" required
+                                                                      <input name="name" type="text" required
                                                                           class="form-control form-control-sm"
                                                                           id="company-name" placeholder="اسم الطالب رباعي ">
+
+                                                                     <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
+
                                                                   </div>
                                                               </div>
 
@@ -57,10 +62,14 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">الرقم
                                                                       القومي</label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="text" required
+                                                                      <input name="national_id" type="text" required
                                                                           class="form-control form-control-sm"
                                                                           id="company-name"
-                                                                          placeholder="National ID">
+                                                                          placeholder="" >
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                        </div>
                                                                   </div>
                                                               </div>
 
@@ -70,9 +79,8 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">الشهادة
                                                                       الحاصل عليها</label>
                                                                   <div class="col-sm-9">
-                                                                      <select name="country_code"
-                                                                          class="form-control country_code  form-control-sm"
-                                                                          id="payment-method-country">
+                                                                      <select name="certificate_obtained" id="diplom" onchange="dipFunction()"
+                                                                          class="form-control country_code  form-control-sm">
                                                                           <option value="">اختر</option>
                                                                           <option value="ثانويه عامه ادبي">ثانويه عامه
                                                                               ادبي</option>
@@ -95,6 +103,10 @@ include 'includes/header.php';
                                                                           <option value="شهاده معادله"> شهاده معادله
                                                                           </option>
                                                                       </select>
+                                                                      <input  type="text" placeholder="برجاء ادخال اسم الشهادة " id="diplo" class="form-control form-control-sm " style="display: none;margin-top:8px">  
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
 
@@ -103,7 +115,7 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">الجنسية
                                                                        </label>
                                                                   <div class="col-sm-9">
-                                                                      <select onchange="otherFunction()" name="country_code" id="other"
+                                                                      <select name="nationality" onchange="otherFunction()" name="country_code" id="other"
                                                                           class="form-control country_code  form-control-sm"
                                                                           id="payment-method-country">
                                                                           <option value="">اختر</option>
@@ -116,7 +128,10 @@ include 'includes/header.php';
                                                                           <option value="oth" >أخرى</option>
 
                                                                       </select>
-                                                                      <input  type="text" placeholder="برجاء ادخال الجنسية هنا" id="othertxt" class="form-control form-control-sm othertxt" style="display: none;margin-top:8px">  
+                                                                      <input  type="text" placeholder="برجاء ادخال الجنسية هنا" id="othertxt" class="form-control form-control-sm othertxt" style="display: none;margin-top:8px"> 
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div> 
                                                                   </div>
                                                               </div>
 
@@ -126,13 +141,16 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">الديانة
                                                                        </label>
                                                                   <div class="col-sm-9">
-                                                                      <select name="country_code"
+                                                                      <select name="religion"
                                                                           class="form-control country_code  form-control-sm"
                                                                           id="payment-method-country">
                                                                           <option value="مسلم">مسلم</option>
                                                                           <option value="مسيحي">مسيحي</option>
                                                                      
                                                                       </select>
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
 
@@ -143,7 +161,11 @@ include 'includes/header.php';
                                                                       <input type="text" required
                                                                           class="form-control form-control-sm"
                                                                           id="company-address"
-                                                                          placeholder="">
+                                                                          placeholder="" name="address">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
 
@@ -152,20 +174,28 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">التليفون
                                                                       الارضي</label>
                                                                   <div class="col-sm-9">
-                                                                  <input type="tel" required
+                                                                  <input type="tel" name="landline_phone"
                                                                           class="form-control form-control-sm"
                                                                           id="company-phone"
-                                                                          placeholder="" pattern="[0-9]{2,3}-[0-9]{7}">
+                                                                          placeholder="" pattern="[0-9]{2,3}-[0-9]{7}" >
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                               <div class="form-group row mt-3">
                                                                   <label for="company-phone"
                                                                       class="col-sm-3 col-form-label col-form-label-sm">موبايل الطالب</label>
                                                                   <div class="col-sm-9">
-                                                                  <input type="tel" required
+                                                                  <input type="tel" required name="mobile"
                                                                           class="form-control form-control-sm"
                                                                           id="company-phone"
                                                                           placeholder="xxxx xxx xxxx" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                               <div class="form-group row mt-3">
@@ -174,10 +204,14 @@ include 'includes/header.php';
                                                                       ولي الامر الاول
                                                                   </label>
                                                                   <div class="col-sm-9">
-                                                                  <input type="tel" required
+                                                                  <input type="tel" required name="Parents_phone1"
                                                                           class="form-control form-control-sm"
                                                                           id="company-phone"
                                                                           placeholder="xxxx xxx xxxx" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
 
@@ -187,38 +221,47 @@ include 'includes/header.php';
                                                                       ولي الامر الثاني
                                                                   </label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="tel" required
+                                                                      <input type="tel" name="Parents_phone2"
                                                                           class="form-control form-control-sm"
                                                                           id="company-phone"
                                                                           placeholder="xxxx xxx xxxx" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
-                                                          
-
-                                                              <div class="form-group row invoice-created-by mt-3">
-                                                                  <label for="payment-method-country"
-                                                                      class="col-sm-3 col-form-label col-form-label-sm">
-                                                                      طالب وافد </label>
-                                                                  <div class="col-sm-9 mt-2">
-                                                                     
-                                                                      <input type="checkbox" class="new-control-input"
-                                                                          >
-
-                                                                      <!--  -->
-                                                                  </div>
-
-                                                              </div>
-
+                                      
                                                               <div class="form-group row mt-3">
                                                                   <label for="company-phone"
                                                                       class="col-sm-3 col-form-label col-form-label-sm">
                                                                        إسم المستخدم 
                                                                   </label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="text" readonly
+                                                                      <input type="text" readonly name="username"
                                                                           class="form-control form-control-sm"
                                                                           id="company-phone"
-                                                                          placeholder="">
+                                                                          placeholder="" style="color: black;">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="form-group row mt-3">
+                                                                  <label for="client-address"
+                                                                      class="col-sm-3 col-form-label col-form-label-sm">
+                                                                       كلمة المرور 
+                                                                  </label>
+                                                                  <div class="col-sm-9">
+                                                                      <input type="text" readonly name="password"
+                                                                          class="form-control form-control-sm"
+                                                                          id="client-address"
+                                                                          placeholder="" style="color: black;">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -237,9 +280,12 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">تاريخ
                                                                       الميلاد</label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="date" required
+                                                                      <input type="date" required name="birth_date"
                                                                           class="form-control form-control-sm"
                                                                           id="client-name" placeholder="">
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
 
@@ -249,23 +295,25 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">دولة
                                                                       الميلاد</label>
                                                                       <div class="col-sm-9">
-                                                                      <select onchange="natFunction()" name="country_code"
-                                                                          class="form-control country_code  form-control-sm"
-                                                                          id="nat">
-                                                                          <option>اختر</option>
+                                                                      <select onchange="natFunction()" name="birth_country"  id="nat"
+                                                                          class="form-control country_code  form-control-sm">
+                                                                          <option value="">اختر</option>
                                                                           <option value="مصر">مصر</option>
                                                                           <option value="أخرى">أخرى</option>
                                                                      
                                                                       </select>
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
-                                                              <div id="govern" style="display: none;">
+                                                             <div id="misr" style="display: none;">
                                                               <div class="form-group row invoice-created-by">
                                                                   <label for="company-address"
                                                                       class="col-sm-3 col-form-label col-form-label-sm">محافظة الميلاد
                                                                        </label>
                                                                   <div class="col-sm-9">
-                                                                      <select name="country_code"
+                                                                      <select name="birth_province"
                                                                           class="form-control country_code  form-control-sm"
                                                                           id="payment-method-country">
                                                                           <option value="">اختر</option>
@@ -289,9 +337,12 @@ include 'includes/header.php';
 
 
                                                                       </select>
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
-                                                              </div>
+                                                            </div>
 
                                                               <div id="international" style="display: none;">
                                                               <div class="form-group row mt-3" >
@@ -304,6 +355,10 @@ include 'includes/header.php';
                                                                           class="form-control form-control-sm"
                                                                           id="client-address"
                                                                           placeholder="">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                               </div>
@@ -313,7 +368,7 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">تاريخ
                                                                      الحصول علي الشهادة</label>
                                                                   <div class="col-sm-4">
-                                                                  <select onchange="dateFunction()" name="country_code" id="date"
+                                                                  <select onchange="dateFunction()" name="certificate_obtained_date" id="date"
                                                                           class="form-control country_code  form-control-sm"
                                                                           id="payment-method-country ">
                                                                           <option value="">اختر</option>
@@ -328,6 +383,9 @@ include 'includes/header.php';
                                                                           <option>2029</option>
                                                                           <option>2030</option>
                                                                       </select>
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                                    <span style="font-size: 30px;">&#8260;</span>
                                                                   <div class="col-sm-4">
@@ -349,6 +407,10 @@ include 'includes/header.php';
                                                                           name="custom-radio-4">
                                                                       <span  class="new-control-indicator"></span><span
                                                                           class="new-radio-content">انثي</span>
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                               <div id="mili" >
@@ -358,10 +420,14 @@ include 'includes/header.php';
                                                                       منطقة التجنيد
                                                                   </label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="text" required
+                                                                      <input type="text" name="recruitment_area"
                                                                           class="form-control form-control-sm"
                                                                           id="client-address"
                                                                           placeholder="">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                               </div>
@@ -372,34 +438,69 @@ include 'includes/header.php';
                                                                       الرقم العسكري
                                                                   </label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="text" required
+                                                                      <input type="text" name="military_number"
                                                                           class="form-control form-control-sm"
                                                                           id="company-phone"
                                                                           placeholder="">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                               </div>
-                                                              
+                                                              <div class="form-group row mt-3">
+                                                                  <label for="client-address"
+                                                                      class="col-sm-3 col-form-label col-form-label-sm">
+                                                                      الايميل
+                                                                  </label>
+                                                                  <div class="col-sm-9">
+                                                                      <input type="email" name="email"  
+                                                                          class="form-control form-control-sm"
+                                                                          id="client-address"
+                                                                          placeholder="">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
+                                                                  </div>
+                                                              </div> 
+
                                                               <div class="form-group row mt-3">
                                                                   <label for="client-address"
                                                                       class="col-sm-3 col-form-label col-form-label-sm">مهنة
                                                                       ولي الامر</label>
                                                                   <div class="col-sm-9">
-                                                                      <input type="text" required
+                                                                      <input type="text" name="father_profession"
                                                                           class="form-control form-control-sm"
                                                                           id="client-address"
                                                                           placeholder="">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
+                                                              <div class="form-group row invoice-created-by mt-3">
+                                                                  <label for="payment-method-country"
+                                                                      class="col-sm-3 col-form-label col-form-label-sm">
+                                                                      طالب وافد </label>
+                                                                  <div class="col-sm-9 mt-2">
+                                                                     
+                                                                      <input type="checkbox" class="new-control-input" name="immigrant_student">
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
+                                                                  </div>
 
-
+                                                              </div>
                                                                   
                                                               <div class="form-group row invoice-created-by mt-5">
                                                                   <label for="payment-method-country"
                                                                       class="col-sm-3 col-form-label col-form-label-sm">تصنيف
                                                                       الطلاب</label>
                                                                   <div class="col-sm-9">
-                                                                      <select name="country_code"
+                                                                      <select name="student_classification"
                                                                           class="form-control country_code  form-control-sm"
                                                                           id="payment-method-country">
                                                                           <option value="">اختر</option>
@@ -411,6 +512,10 @@ include 'includes/header.php';
                                                                           <option value="United Kingdom">سحب ملف
                                                                           </option>
                                                                       </select>
+
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
 
@@ -419,13 +524,17 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">
                                                                       التخصص </label>
                                                                   <div class="col-sm-9">
-                                                                      <select name="country_code"
+                                                                      <select name="specialization"
                                                                           class="form-control country_code  form-control-sm"
                                                                           id="payment-method-country">
                                                                           <option value="">اختر</option>
-                                                                          <option value="United States">انجليزي</option>
-                                                                          <option value="United Kingdom">عربي</option>
+                                                                          <option value="انجليزي">انجليزي</option>
+                                                                          <option value="عربي">عربي</option>
                                                                       </select>
+
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                             
@@ -435,19 +544,22 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">الفرقة
                                                                       الدراسية</label>
                                                                   <div class="col-sm-9">
-                                                                      <select name="country_code"
+                                                                      <select name="study_group"
                                                                           class="form-control country_code  form-control-sm"
                                                                           id="payment-method-country">
                                                                           <option value="">اختر</option>
-                                                                          <option value="United States">الفرقه الاولي
+                                                                          <option value="الفرقه الاولي">الفرقه الاولي
                                                                           </option>
-                                                                          <option value="United Kingdom">الفرقه الثانيه
+                                                                          <option value="الفرقه الثانيه">الفرقه الثانيه
                                                                           </option>
-                                                                          <option value="United Kingdom">الفرقه الثالثه
+                                                                          <option value="الفرقه الثالثه">الفرقه الثالثه
                                                                           </option>
-                                                                          <option value="United Kingdom">الفرقه الرابعه
+                                                                          <option value="الفرقه الرابعه">الفرقه الرابعه
                                                                           </option>
                                                                       </select>
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
 
@@ -456,41 +568,49 @@ include 'includes/header.php';
                                                                       class="col-sm-3 col-form-label col-form-label-sm">الحالة
                                                                       الدراسية</label>
                                                                   <div class="col-sm-9">
-                                                                      <select name="country_code"
+                                                                      <select name="studing_status"
                                                                           class="form-control country_code  form-control-sm"
                                                                           id="payment-method-country">
                                                                           <option value="">اختر</option>
-                                                                          <option value="United States"> مستجد</option>
-                                                                          <option value="United Kingdom">باقي </option>
-                                                                          <option value="United Kingdom">من الخارج
-                                                                          </option>
+                                                                          <option value="مستجد"> مستجد</option>
+                                                                          <option value="باقي">باقي </option>
+                                                                          <option value="من الخارج">من الخارج</option>
                                                                       </select>
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
 
-                                                              <div class="form-group row mt-3">
-                                                                  <label for="client-address"
-                                                                      class="col-sm-3 col-form-label col-form-label-sm">
-                                                                      الايميل
-                                                                  </label>
-                                                                  <div class="col-sm-9">
-                                                                      <input type="email" required 
-                                                                          class="form-control form-control-sm"
-                                                                          id="client-address"
-                                                                          placeholder="">
-                                                                  </div>
-                                                              </div>                                                           
+                                                              <div class="form-group row invoice-created-by">
+                                                                  <label for="payment-method-country"
+                                                                      class="col-sm-3 col-form-label col-form-label-sm">المرشد الاكاديمي
+                                                                      </label>
+                                                                  <div class="col-sm-5">
+                                                                      <select name="academic_advisor"
+                                                                          class="form-control country_code  form-control-sm"
+                                                                          id="payment-method-country">
+                                                                          <option value="">اختر</option>
+                                                                          <option value="د/ شيرين شوقي">د/ شيرين شوقي</option>
+                                                                          <option value="د/ محمد أبوزيد">د/ محمد أبوزيد</option>
+                                                                          <option value="د/ محمد عبدالعليم صابر">د/ محمد عبدالعليم صابر</option>
+                                                                          <option value="د/ جوزيف جورج">د/ جوزيف جورج</option>
 
-                                                              <div class="form-group row mt-3">
-                                                                  <label for="client-address"
-                                                                      class="col-sm-3 col-form-label col-form-label-sm">
-                                                                      الرقم السري 
-                                                                  </label>
-                                                                  <div class="col-sm-9">
-                                                                      <input type="text" readonly
+                                                                      </select>
+
+                                                                      <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
+                                                                  </div>
+                                                                  <div class="col-sm-3"> 
+                                                                  <input type="number" readonly
                                                                           class="form-control form-control-sm"
                                                                           id="client-address"
-                                                                          placeholder="">
+                                                                          placeholder="" max="200" min="0" value="" style="color: black;">
+
+                                                                          <div class="alert alert-danger" style="margin-top: 10px;">
+                                                                        <div class="text-danger text-center h6"></div>
+                                                                    </div>
                                                                   </div>
                                                               </div>
                                                           </div>

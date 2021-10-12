@@ -45,27 +45,45 @@
          document.getElementById("mili2").style.display = "block";
     }
 
-    function natFunction(){
+    function natFunction()
+    {
         var t = document.getElementById("nat").value;
-        if(nat == "مصر")
-        {
-            document.getElementById("govern").style.display="block";
-            document.getElementById("international").style.display="none";
-
-        }
-        else
-        {
-            document.getElementById("international").style.display="block";
-            document.getElementById("govern").style.display="none";
-
-        }
+        console.log(t);
+        switch (t){
+            case 'أخرى':
+                document.getElementById("misr").style.display="none";
+             document.getElementById("international").style.display="block";
+             break;
+             case 'مصر':
+                document.getElementById("international").style.display="none";
+                document.getElementById("misr").style.display="block";
+             break;
+           
+      }
     }
+
     function dateFunction()
     {
         var d = document.getElementById('date').value;
         console.log (d);
         var y = parseInt(d)+1;
         document.getElementById('DATE').setAttribute("value", y);
+    }
+
+    function dipFunction()
+    {
+        var d = document.getElementById('diplom').value;
+        console.log(d);
+
+        if(d== 'شهاده معادله')
+        {
+            document.getElementById('diplo').style.display="block";
+        }
+        else
+        {
+            document.getElementById('diplo').style.display="none";
+
+        }
     }
 </script>
 </body>
