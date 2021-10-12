@@ -1,9 +1,14 @@
+    
+
+
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
     <script src="bootstrap/js/popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script>
         $(document).ready(function() {
             App.init();
@@ -17,5 +22,51 @@
     <script src="assets/js/dashboard/dash_1.js"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
+    <!-- my script -->
+    <script>
+    function otherFunction() {
+      var v=  document.getElementById("other").value;
+        if(v == 'oth'){
+        document.getElementById("othertxt").style.display="block";
+        }
+        else
+        {
+            document.getElementById("othertxt").style.display="none";
+
+        }
+   }
+
+    function milFunction() {
+      document.getElementById("mili").style.display = "none";
+      document.getElementById("mili2").style.display = "none";
+   }
+    function miliFunction() {
+         document.getElementById("mili").style.display = "block";
+         document.getElementById("mili2").style.display = "block";
+    }
+
+    function natFunction(){
+        var t = document.getElementById("nat").value;
+        if(nat == "مصر")
+        {
+            document.getElementById("govern").style.display="block";
+            document.getElementById("international").style.display="none";
+
+        }
+        else
+        {
+            document.getElementById("international").style.display="block";
+            document.getElementById("govern").style.display="none";
+
+        }
+    }
+    function dateFunction()
+    {
+        var d = document.getElementById('date').value;
+        console.log (d);
+        var y = parseInt(d)+1;
+        document.getElementById('DATE').setAttribute("value", y);
+    }
+</script>
 </body>
 </html>

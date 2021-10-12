@@ -19,7 +19,33 @@
     <link href="plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
     <link href="assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=El+Messiri&display=swap" rel="stylesheet">
+    <style>
+        .invoice-content .invoice-address-client .invoice-address-client-fields label 
+        ,.invoice-content .invoice-address-company .invoice-address-company-fields label 
+        ,.form-control.form-control-sm
+        ,.new-radio-content 
+        ,.invoice-detail-note .invoice-note label
+        ,.invoice-detail-note textarea
+        ,.invoice-content .invoice-detail-title
+        ,.invoice-action-btn
+        ,.sidebar-closed>.sidebar-wrapper ul.menu-categories li.menu.menu-heading>.heading span
+        ,#sidebar ul.menu-categories li.menu>a span:not(.badge) 
+        ,#sidebar ul.menu-categories ul.submenu>li a
+        ,.cre   {
+            font-family: 'El Messiri', sans-serif;
+        }
+        .btn .btn-secondary .scroll-top-btn .d-inline-block
+        {
+                    box-shadow: rgb(87, 169, 70) 0px 10px 20px -10px;
+                    background-image: linear-gradient(
+                   -225deg, rgb(87, 169, 707) 0%, rgb(87, 169, 70) 48%, rgb(87, 169, 70) 100%);
+                   background-color: #57a946;
+        }
+    </style>
 </head>
 <style>
 
@@ -30,12 +56,9 @@
     <div class="header-container fixed-top">
         <header class="header navbar navbar-expand-sm expand-header">
             <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
-
+            <img src="assets/img/logo.jpg" style="width:300px;margin-right:10px">
             <ul class="navbar-item flex-row ml-auto">
- 
- 
-              
- 
+                <li class="nav-item align-self-center search-animated cre">نظام الساعات المعتمدة</li>
 
                 <li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,8 +69,7 @@
                             <div class="media mx-auto">
                                 <img src="assets/img/profile-7.jpeg" class="img-fluid mr-2" alt="avatar">
                                 <div class="media-body">
-                                    <h5>User</h5>
-                                    <p>Role</p>
+                                    <h5>User Name</h5>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +107,7 @@
                 <ul class="navbar-nav theme-brand flex-row  text-center">
                     <li class="nav-item theme-logo">
                         <a href="index.php">
-                            <!-- <img src="assets/img/logo.svg" class="navbar-logo" alt="logo"> -->
+                            <!-- <img src="assets/img/lo.jpg" class="navbar-logo" alt="logo"> -->
                         </a>
                     </li>
                     <li class="nav-item theme-text">
@@ -117,14 +139,14 @@
                         <a href="index.php" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                <span>Dashboard</span>
+                                <span>الرئيسية</span>
                             </div>
                         </a>
                     </li>
 
 
                     <li class="menu menu-heading">
-                        <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg><span>APPLICATIONS</span></div>
+                        <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg><span></span></div>
                     </li>
 
               
