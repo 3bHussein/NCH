@@ -51,12 +51,16 @@
         console.log(t);
         switch (t){
             case 'أخرى':
-                document.getElementById("misr").style.display="none";
+             document.getElementById("misr").style.display="none";
              document.getElementById("international").style.display="block";
+             document.getElementById("idnum").style.display="none";
+             document.getElementById("passnum").style.display="block";
              break;
              case 'مصر':
                 document.getElementById("international").style.display="none";
                 document.getElementById("misr").style.display="block";
+                document.getElementById("idnum").style.display="block";
+             document.getElementById("passnum").style.display="none";
              break;
            
       }

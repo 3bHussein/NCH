@@ -33,14 +33,7 @@ include 'includes/header.php';
                         <div
                             class="col-xl-8 col-lg-7 col-md-7 col-sm-5 text-sm-right text-center layout-spacing align-self-center">
                             <div class="d-flex justify-content-sm-end justify-content-center">
-                                <!-- <svg id="btn-add-contact" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="8.5" cy="7" r="4"></circle>
-                                    <line x1="20" y1="8" x2="20" y2="14"></line>
-                                    <line x1="23" y1="11" x2="17" y2="11"></line>
-                                </svg> -->
+                            
                                 <a href="add_student.php"> 
                                 <svg id="btn-add-contact" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -55,7 +48,7 @@ include 'includes/header.php';
 
                                 
 
-                                <div class="switch align-self-center">
+                                <!-- <div class="switch align-self-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="feather feather-list view-list active-view">
@@ -74,7 +67,7 @@ include 'includes/header.php';
                                         <rect x="14" y="14" width="7" height="7"></rect>
                                         <rect x="3" y="14" width="7" height="7"></rect>
                                     </svg>
-                                </div>
+                                </div> -->
                             </div>
 
                             <!-- Modal -->
@@ -156,18 +149,20 @@ include 'includes/header.php';
                     <div class="searchable-items list">
                         <div class="items items-header-section">
                             <div class="item-content">
-                                <div class="">
-
-                                    <h4>Name</h4>
+                                <div class="name">
+                                    <h4>إسم الطالب</h4>
                                 </div>
-                                <div class="user-email">
-                                    <h4>Email</h4>
+                                <div class="username">
+                                    <h4>كود الطالب</h4>
                                 </div>
-                                <div class="user-location">
-                                    <h4 style="margin-left: 0;">Location</h4>
+                                <div class="study_group">
+                                    <h4 style="margin-left: 0;">الفرقة الدراسية</h4>
                                 </div>
-                                <div class="user-phone">
-                                    <h4 style="margin-left: 3px;">Phone</h4>
+                                <div class="specialization">
+                                    <h4 style="margin-left: 3px;">التخصص</h4>
+                                </div>
+                                <div class="studing_status">
+                                    <h4 style="margin-left: 3px;">الحالة الدراسية</h4>
                                 </div>
                                 <div class="action-btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -184,31 +179,22 @@ include 'includes/header.php';
                             </div>
                         </div>
 
-
-
-
-
                         <div class="items">
                             <div class="item-content">
-                                <div class="user-profile">
-                                   
-                                    <!-- <img src="assets/img/profile-12.jpeg" alt="avatar"> -->
-                                    <div class="user-meta-info">
-                                        <p class="user-name" data-name="Lila Perry">Lila Perry</p>
-                                        <!-- <p class="user-work" data-occupation="UX/UI Designer">UX/UI Designer</p> -->
-                                    </div>
+                                <div class="name">
+                                        <p class="user-name" data-name="محمد احمد احمد ">محمد احمد احمد</p>
                                 </div>
-                                <div class="user-email">
-                                    <p class="info-title">Email: </p>
-                                    <p class="usr-email-addr" data-email="lila@mail.com">lila@mail.com</p>
+                                <div class="name">
+                                    <p class="username" data-name="222222">222222</p>
                                 </div>
-                                <div class="user-location">
-                                    <p class="info-title">Location: </p>
-                                    <p class="usr-location" data-location="Miami, USA">Miami, USA</p>
+                                <div class="name">
+                                    <p class="study_group" data-name="فرقة أولى">فرقة أولى</p>
                                 </div>
-                                <div class="user-phone">
-                                    <p class="info-title">Phone: </p>
-                                    <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
+                                <div class="name">
+                                    <p class="specialization" data-name="حاسب">حاسب</p>
+                                </div>
+                                <div class="name">
+                                    <p class="studing_status" data-name="مرشح">مرشح</p>
                                 </div>
                                 <div class="action-btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -219,10 +205,13 @@ include 'includes/header.php';
 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-user-minus delete">
-                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="8.5" cy="7" r="4"></circle>
-                                        <line x1="23" y1="11" x2="17" y2="11"></line>
+                                        stroke-linejoin="round" class="feather feather-trash-2  delete-multiple">
+                                        <polyline points="3 6 5 6 21 6"></polyline>
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                        </path>
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
                                     </svg>
                                 </div>
                             </div>
