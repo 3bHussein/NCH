@@ -212,6 +212,7 @@ include 'includes/header.php';
                                                                 </select>
 
                                                             </div>
+<<<<<<< HEAD
                                                             <br>
                                                             <br>
                                                             <br>
@@ -221,6 +222,8 @@ include 'includes/header.php';
                                                                         <div class="text-danger text-center h6"></div>
                                                                     </div>
                                                             </div>  
+=======
+>>>>>>> cc8e376a61f3a71b78188c3fe4d1042e79ee99d9
                                                         </div>
                                                     </div>
                                                 </div>
@@ -238,10 +241,18 @@ include 'includes/header.php';
                                             </div>
                                             <div class="col-xl-4 col-md-4">
 
+<<<<<<< HEAD
                                                 <input data-toggle="modal" data-target="#myModal" type="button" class="btn btn-success btn-download"
                                                     style="width: 100%;font-size:15px;" value="تسجيل">
                                             </div>
                                             
+=======
+                                                <input type="submit" class="btn btn-success btn-download"
+                                                    style="width: 100%;font-size:15px;" value="تسجيل">
+                                            </div>
+                                            <div class="col-xl-4 col-md-4">
+                                            </div>
+>>>>>>> cc8e376a61f3a71b78188c3fe4d1042e79ee99d9
                                         </div>
                                     </div>
 
@@ -258,6 +269,7 @@ include 'includes/header.php';
     </div>
 </div>
 <!--  END CONTENT AREA  -->
+<<<<<<< HEAD
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -271,6 +283,9 @@ include 'includes/header.php';
       </div>
     </div>
   </div>
+=======
+
+>>>>>>> cc8e376a61f3a71b78188c3fe4d1042e79ee99d9
 <script>
     function dateFunction() {
         var d = document.getElementById('date').value;
