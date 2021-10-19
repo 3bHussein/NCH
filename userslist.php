@@ -42,23 +42,21 @@ include 'includes/header.php';
 
                     </div>
 
-        <table id="example" class="stlist table table-striped table-light searchable-items list" style="width:100%">
+        <table id="example" class="table table-striped table-light searchable-items list" style="width:100%">
             <thead class="items items-header-section">
                 <tr>
-                    <th>إسم الطالب</th>
-                    <th>كود الطالب</th>
-                    <th>الفرقة الدراسية</th>
-                    <th>التخصص</th>
-                    <th>الحالة الدراسية </th>
+                    <th class="ar">إسم المستخدم</th>
+                    <th class="ar">البريد الإلكتروني</th>
+                    <th class="ar"> رقم الهاتف</th>
+                    <th>Role</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody class="searchable-items list">
                 <tr>
-                    <td>  </td>
-                    <td> </td>
-                    <td></td>
-                    <td></td>
+                    <td class="ar"></td>
+                    <td class="ar"></td>
+                    <td class="ar"></td>
                     <td></td>
                     <td>
                        <button 
@@ -85,7 +83,7 @@ include 'includes/header.php';
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <p class="delconfirm" style="color: #e70423; font-size:x-large">هل تريد حذف الطالب "كود الطالب" </p>
+          <p class="delconfirm" style="color: #e70423; font-size:x-large">هل تريد حذف المستخدم "اسم المستخدم" </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">حذف</button>
